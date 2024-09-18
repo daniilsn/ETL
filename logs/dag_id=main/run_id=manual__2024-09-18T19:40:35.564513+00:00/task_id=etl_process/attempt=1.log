@@ -1,0 +1,272 @@
+[2024-09-18T19:40:42.943+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-18T19:40:42.969+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: main.etl_process manual__2024-09-18T19:40:35.564513+00:00 [queued]>
+[2024-09-18T19:40:42.981+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: main.etl_process manual__2024-09-18T19:40:35.564513+00:00 [queued]>
+[2024-09-18T19:40:42.982+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-09-18T19:40:43.001+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): etl_process> on 2024-09-18 19:40:35.564513+00:00
+[2024-09-18T19:40:43.009+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=82) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-18T19:40:43.011+0000] {standard_task_runner.py:72} INFO - Started process 83 to run task
+[2024-09-18T19:40:43.012+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'main', 'etl_process', 'manual__2024-09-18T19:40:35.564513+00:00', '--job-id', '387', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmphv21x09u']
+[2024-09-18T19:40:43.014+0000] {standard_task_runner.py:105} INFO - Job 387: Subtask etl_process
+[2024-09-18T19:40:43.081+0000] {task_command.py:467} INFO - Running <TaskInstance: main.etl_process manual__2024-09-18T19:40:35.564513+00:00 [running]> on host 6ae25dc88530
+[2024-09-18T19:40:43.224+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='main' AIRFLOW_CTX_TASK_ID='etl_process' AIRFLOW_CTX_EXECUTION_DATE='2024-09-18T19:40:35.564513+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-18T19:40:35.564513+00:00'
+[2024-09-18T19:40:43.225+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-18T19:41:16.615+0000] {logging_mixin.py:190} INFO - +--------+
+|avg_year|
++--------+
+|    1972|
++--------+
+[2024-09-18T19:41:22.980+0000] {logging_mixin.py:190} INFO - +-----------+
+|median_year|
++-----------+
+|       1972|
++-----------+
+[2024-09-18T19:41:29.514+0000] {logging_mixin.py:190} INFO - +--------------------+-----+
+|              region|count|
++--------------------+-----+
+|  Московская область|24617|
+|              Москва|21632|
+|Свердловская область|20329|
+|   Красноярский край|13646|
+|Республика Татарстан|13528|
+|Нижегородская обл...|13159|
+| Кемеровская область|11961|
+|   Иркутская область|10207|
+|  Ростовская область| 9942|
+|   Самарская область| 9792|
++--------------------+-----+
+[2024-09-18T19:41:35.805+0000] {logging_mixin.py:190} INFO - +---------------+-----+
+|  locality_name|count|
++---------------+-----+
+|         Москва|21551|
+|         Самара| 5713|
+|     Красноярск| 5170|
+|   Екатеринбург| 4728|
+|         Казань| 4657|
+|Санкт-Петербург| 4542|
+|    Новосибирск| 4436|
+|    Калининград| 4427|
+|        Воронеж| 4215|
+| Ростов-на-Дону| 3547|
++---------------+-----+
+[2024-09-18T19:41:44.020+0000] {logging_mixin.py:190} INFO - +--------+--------------------+---+
+|house_id|              region|min|
++--------+--------------------+---+
+|  103136|Республика Башкор...|0.2|
+|  124970|Республика Башкор...|0.2|
+|  124951|Республика Башкор...|0.2|
+|  124952|Республика Башкор...|0.2|
+|  124953|Республика Башкор...|0.2|
+|  124954|Республика Башкор...|0.2|
+|  124955|Республика Башкор...|0.2|
+|  124956|Республика Башкор...|0.2|
+|  124957|Республика Башкор...|0.2|
+|  124958|Республика Башкор...|0.2|
+|  124959|Республика Башкор...|0.2|
+|  124960|Республика Башкор...|0.2|
+|  124961|Республика Башкор...|0.2|
+|  124962|Республика Башкор...|0.2|
+|  124963|Республика Башкор...|0.2|
+|  124964|Республика Башкор...|0.2|
+|  124965|Республика Башкор...|0.2|
+|  124966|Республика Башкор...|0.2|
+|  124967|Республика Башкор...|0.2|
+|  124968|Республика Башкор...|0.2|
++--------+--------------------+---+
+only showing top 20 rows
+[2024-09-18T19:41:50.466+0000] {logging_mixin.py:190} INFO - +--------+--------------------+-----+
+|house_id|              region|  max|
++--------+--------------------+-----+
+|  405168|Приволжский федер...|116.0|
+|  405188|Приволжский федер...|116.0|
+|  405169|Приволжский федер...|116.0|
+|  405170|Приволжский федер...|116.0|
+|  405171|Приволжский федер...|116.0|
+|  405172|Приволжский федер...|116.0|
+|  405173|Приволжский федер...|116.0|
+|  405174|Приволжский федер...|116.0|
+|  405175|Приволжский федер...|116.0|
+|  405176|Приволжский федер...|116.0|
+|  405177|Приволжский федер...|116.0|
+|  405178|Приволжский федер...|116.0|
+|  405179|Приволжский федер...|116.0|
+|  405180|Приволжский федер...|116.0|
+|  405181|Приволжский федер...|116.0|
+|  405182|Приволжский федер...|116.0|
+|  405183|Приволжский федер...|116.0|
+|  405184|Приволжский федер...|116.0|
+|  405185|Приволжский федер...|116.0|
+|  405186|Приволжский федер...|116.0|
++--------+--------------------+-----+
+only showing top 20 rows
+[2024-09-18T19:41:56.669+0000] {logging_mixin.py:190} INFO - +----+-----+
+| age|count|
++----+-----+
+|1920| 3563|
+|1930| 9834|
+|1940|15703|
+|1950|68324|
+|1960|95062|
+|1970|84544|
+|1980|78445|
+|1990|37092|
+|2000|19741|
+|2010| 9902|
++----+-----+
+[2024-09-18T19:42:17.379+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/main.py", line 197, in etl
+    client.execute('INSERT INTO clickhouse.russian_houses VALUES', data_tuples)
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_driver/client.py", line 376, in execute
+    rv = self.process_insert_query(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_driver/client.py", line 604, in process_insert_query
+    sample_block = self.receive_sample_block()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_driver/client.py", line 620, in receive_sample_block
+    raise packet.exception
+clickhouse_driver.errors.ServerException: Code: 81.
+DB::Exception: Database clickhouse doesn't exist. Stack trace:
+
+0. DB::Exception::Exception(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int, bool) @ 0xa82d07a in /usr/bin/clickhouse
+1. DB::DatabaseCatalog::assertDatabaseExistsUnlocked(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const @ 0x13519e5a in /usr/bin/clickhouse
+2. DB::DatabaseCatalog::getDatabase(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const @ 0x1351c8f8 in /usr/bin/clickhouse
+3. DB::Context::resolveStorageID(DB::StorageID, DB::Context::StorageNamespace) const @ 0x134b755e in /usr/bin/clickhouse
+4. ? @ 0x13d1351f in /usr/bin/clickhouse
+5. DB::executeQuery(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::shared_ptr<DB::Context>, bool, DB::QueryProcessingStage::Enum) @ 0x13d11e55 in /usr/bin/clickhouse
+6. DB::TCPHandler::runImpl() @ 0x147f050f in /usr/bin/clickhouse
+7. DB::TCPHandler::run() @ 0x14804259 in /usr/bin/clickhouse
+8. Poco::Net::TCPServerConnection::start() @ 0x1745e52f in /usr/bin/clickhouse
+9. Poco::Net::TCPServerDispatcher::run() @ 0x17460981 in /usr/bin/clickhouse
+10. Poco::PooledThread::run() @ 0x17611609 in /usr/bin/clickhouse
+11. Poco::ThreadImpl::runnableEntry(void*) @ 0x1760ed00 in /usr/bin/clickhouse
+12. ? @ 0x7fb2dc1bc609 in ?
+13. __clone @ 0x7fb2dc0e3293 in ?
+
+[2024-09-18T19:42:17.404+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=main, task_id=etl_process, run_id=manual__2024-09-18T19:40:35.564513+00:00, execution_date=20240918T194035, start_date=20240918T194042, end_date=20240918T194217
+[2024-09-18T19:42:17.439+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-18T19:42:17.440+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 387 for task etl_process (Code: 81.
+DB::Exception: Database clickhouse doesn't exist. Stack trace:
+
+0. DB::Exception::Exception(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int, bool) @ 0xa82d07a in /usr/bin/clickhouse
+1. DB::DatabaseCatalog::assertDatabaseExistsUnlocked(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const @ 0x13519e5a in /usr/bin/clickhouse
+2. DB::DatabaseCatalog::getDatabase(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const @ 0x1351c8f8 in /usr/bin/clickhouse
+3. DB::Context::resolveStorageID(DB::StorageID, DB::Context::StorageNamespace) const @ 0x134b755e in /usr/bin/clickhouse
+4. ? @ 0x13d1351f in /usr/bin/clickhouse
+5. DB::executeQuery(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::shared_ptr<DB::Context>, bool, DB::QueryProcessingStage::Enum) @ 0x13d11e55 in /usr/bin/clickhouse
+6. DB::TCPHandler::runImpl() @ 0x147f050f in /usr/bin/clickhouse
+7. DB::TCPHandler::run() @ 0x14804259 in /usr/bin/clickhouse
+8. Poco::Net::TCPServerConnection::start() @ 0x1745e52f in /usr/bin/clickhouse
+9. Poco::Net::TCPServerDispatcher::run() @ 0x17460981 in /usr/bin/clickhouse
+10. Poco::PooledThread::run() @ 0x17611609 in /usr/bin/clickhouse
+11. Poco::ThreadImpl::runnableEntry(void*) @ 0x1760ed00 in /usr/bin/clickhouse
+12. ? @ 0x7fb2dc1bc609 in ?
+13. __clone @ 0x7fb2dc0e3293 in ?
+; 83)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/main.py", line 197, in etl
+    client.execute('INSERT INTO clickhouse.russian_houses VALUES', data_tuples)
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_driver/client.py", line 376, in execute
+    rv = self.process_insert_query(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_driver/client.py", line 604, in process_insert_query
+    sample_block = self.receive_sample_block()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_driver/client.py", line 620, in receive_sample_block
+    raise packet.exception
+clickhouse_driver.errors.ServerException: Code: 81.
+DB::Exception: Database clickhouse doesn't exist. Stack trace:
+
+0. DB::Exception::Exception(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int, bool) @ 0xa82d07a in /usr/bin/clickhouse
+1. DB::DatabaseCatalog::assertDatabaseExistsUnlocked(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const @ 0x13519e5a in /usr/bin/clickhouse
+2. DB::DatabaseCatalog::getDatabase(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const @ 0x1351c8f8 in /usr/bin/clickhouse
+3. DB::Context::resolveStorageID(DB::StorageID, DB::Context::StorageNamespace) const @ 0x134b755e in /usr/bin/clickhouse
+4. ? @ 0x13d1351f in /usr/bin/clickhouse
+5. DB::executeQuery(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::shared_ptr<DB::Context>, bool, DB::QueryProcessingStage::Enum) @ 0x13d11e55 in /usr/bin/clickhouse
+6. DB::TCPHandler::runImpl() @ 0x147f050f in /usr/bin/clickhouse
+7. DB::TCPHandler::run() @ 0x14804259 in /usr/bin/clickhouse
+8. Poco::Net::TCPServerConnection::start() @ 0x1745e52f in /usr/bin/clickhouse
+9. Poco::Net::TCPServerDispatcher::run() @ 0x17460981 in /usr/bin/clickhouse
+10. Poco::PooledThread::run() @ 0x17611609 in /usr/bin/clickhouse
+11. Poco::ThreadImpl::runnableEntry(void*) @ 0x1760ed00 in /usr/bin/clickhouse
+12. ? @ 0x7fb2dc1bc609 in ?
+13. __clone @ 0x7fb2dc0e3293 in ?
+
+[2024-09-18T19:42:17.521+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-09-18T19:42:17.547+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-18T19:42:17.551+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

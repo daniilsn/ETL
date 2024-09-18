@@ -1,0 +1,24 @@
+[2024-09-09T20:13:49.393+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-09T20:13:49.412+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: main.query_postgres manual__2024-09-09T20:13:46.717807+00:00 [queued]>
+[2024-09-09T20:13:49.422+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: main.query_postgres manual__2024-09-09T20:13:46.717807+00:00 [queued]>
+[2024-09-09T20:13:49.423+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-09-09T20:13:49.438+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): query_postgres> on 2024-09-09 20:13:46.717807+00:00
+[2024-09-09T20:13:49.443+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1223) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-09T20:13:49.445+0000] {standard_task_runner.py:72} INFO - Started process 1224 to run task
+[2024-09-09T20:13:49.446+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'main', 'query_postgres', 'manual__2024-09-09T20:13:46.717807+00:00', '--job-id', '163', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmps7_5yn9b']
+[2024-09-09T20:13:49.447+0000] {standard_task_runner.py:105} INFO - Job 163: Subtask query_postgres
+[2024-09-09T20:13:49.497+0000] {task_command.py:467} INFO - Running <TaskInstance: main.query_postgres manual__2024-09-09T20:13:46.717807+00:00 [running]> on host 2eebb3c419c1
+[2024-09-09T20:13:49.594+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='main' AIRFLOW_CTX_TASK_ID='query_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T20:13:46.717807+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-09T20:13:46.717807+00:00'
+[2024-09-09T20:13:49.595+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-09T20:13:49.669+0000] {logging_mixin.py:190} INFO - PostgreSQL version:                                                        version                                                       
+---------------------------------------------------------------------------------------------------------------------
+ PostgreSQL 15.8 (Debian 15.8-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+(1 row)
+[2024-09-09T20:13:49.670+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-09T20:13:49.682+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-09T20:13:49.683+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=main, task_id=query_postgres, run_id=manual__2024-09-09T20:13:46.717807+00:00, execution_date=20240909T201346, start_date=20240909T201349, end_date=20240909T201349
+[2024-09-09T20:13:49.710+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-09T20:13:49.738+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-09T20:13:49.740+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

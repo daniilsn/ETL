@@ -1,0 +1,21 @@
+[2024-09-09T20:34:04.049+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-09T20:34:04.070+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: main.query_clickhouse manual__2024-09-09T20:34:02.895259+00:00 [queued]>
+[2024-09-09T20:34:04.082+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: main.query_clickhouse manual__2024-09-09T20:34:02.895259+00:00 [queued]>
+[2024-09-09T20:34:04.084+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-09-09T20:34:04.102+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): query_clickhouse> on 2024-09-09 20:34:02.895259+00:00
+[2024-09-09T20:34:04.108+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1649) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-09T20:34:04.110+0000] {standard_task_runner.py:72} INFO - Started process 1650 to run task
+[2024-09-09T20:34:04.111+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'main', 'query_clickhouse', 'manual__2024-09-09T20:34:02.895259+00:00', '--job-id', '165', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp9bm_m440']
+[2024-09-09T20:34:04.112+0000] {standard_task_runner.py:105} INFO - Job 165: Subtask query_clickhouse
+[2024-09-09T20:34:04.167+0000] {task_command.py:467} INFO - Running <TaskInstance: main.query_clickhouse manual__2024-09-09T20:34:02.895259+00:00 [running]> on host 2eebb3c419c1
+[2024-09-09T20:34:04.266+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='main' AIRFLOW_CTX_TASK_ID='query_clickhouse' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T20:34:02.895259+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-09T20:34:02.895259+00:00'
+[2024-09-09T20:34:04.267+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-09T20:34:04.293+0000] {logging_mixin.py:190} INFO - ClickHouse version: 22.1.3.7
+[2024-09-09T20:34:04.293+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-09T20:34:04.305+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-09T20:34:04.305+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=main, task_id=query_clickhouse, run_id=manual__2024-09-09T20:34:02.895259+00:00, execution_date=20240909T203402, start_date=20240909T203404, end_date=20240909T203404
+[2024-09-09T20:34:04.334+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-09T20:34:04.365+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-09T20:34:04.366+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

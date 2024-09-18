@@ -1,0 +1,122 @@
+[2024-09-16T19:34:10.781+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-16T19:34:10.811+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: main.etl_process manual__2024-09-16T19:34:06.763289+00:00 [queued]>
+[2024-09-16T19:34:10.822+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: main.etl_process manual__2024-09-16T19:34:06.763289+00:00 [queued]>
+[2024-09-16T19:34:10.822+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-09-16T19:34:10.839+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): etl_process> on 2024-09-16 19:34:06.763289+00:00
+[2024-09-16T19:34:10.844+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=96) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-16T19:34:10.847+0000] {standard_task_runner.py:72} INFO - Started process 99 to run task
+[2024-09-16T19:34:10.847+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'main', 'etl_process', 'manual__2024-09-16T19:34:06.763289+00:00', '--job-id', '339', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpvj_x9__4']
+[2024-09-16T19:34:10.849+0000] {standard_task_runner.py:105} INFO - Job 339: Subtask etl_process
+[2024-09-16T19:34:10.911+0000] {task_command.py:467} INFO - Running <TaskInstance: main.etl_process manual__2024-09-16T19:34:06.763289+00:00 [running]> on host 276739585c9a
+[2024-09-16T19:34:11.023+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='main' AIRFLOW_CTX_TASK_ID='etl_process' AIRFLOW_CTX_EXECUTION_DATE='2024-09-16T19:34:06.763289+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-16T19:34:06.763289+00:00'
+[2024-09-16T19:34:11.024+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-16T19:34:37.744+0000] {logging_mixin.py:190} INFO - +--------+
+|avg_year|
++--------+
+|    1972|
++--------+
+[2024-09-16T19:34:43.082+0000] {logging_mixin.py:190} INFO - +-----------+
+|median_year|
++-----------+
+|       1972|
++-----------+
+[2024-09-16T19:34:48.625+0000] {logging_mixin.py:190} INFO - +--------------------+-----+
+|              region|count|
++--------------------+-----+
+|  Московская область|24617|
+|              Москва|21632|
+|Свердловская область|20329|
+|   Красноярский край|13646|
+|Республика Татарстан|13528|
+|Нижегородская обл...|13159|
+| Кемеровская область|11961|
+|   Иркутская область|10207|
+|  Ростовская область| 9942|
+|   Самарская область| 9792|
++--------------------+-----+
+[2024-09-16T19:34:53.593+0000] {logging_mixin.py:190} INFO - +---------------+-----+
+|  locality_name|count|
++---------------+-----+
+|         Москва|21551|
+|         Самара| 5713|
+|     Красноярск| 5170|
+|   Екатеринбург| 4728|
+|         Казань| 4657|
+|Санкт-Петербург| 4542|
+|    Новосибирск| 4436|
+|    Калининград| 4427|
+|        Воронеж| 4215|
+| Ростов-на-Дону| 3547|
++---------------+-----+
+[2024-09-16T19:35:00.072+0000] {logging_mixin.py:190} INFO - +--------------------+----+
+|              region| min|
++--------------------+----+
+|Республика Башкор...| 0.2|
+| Костромская область|0.59|
+|Республика Татарстан| 1.0|
+|   Красноярский край| 1.0|
+|   Самарская область| 1.0|
+|  Краснодарский край| 1.2|
+|     Санкт-Петербург| 1.6|
+| Вологодская область|1.71|
+|  Ростовская область|1.95|
+|  Тамбовская область| 2.0|
+|  Курганская область|2.17|
+| Республика Марий Эл|2.18|
+|Кабардино-Балкарс...| 2.2|
+|  Республика Карелия|2.66|
+|     Приморский край| 2.8|
+| Ульяновская область|2.88|
+|   Кировская область| 2.9|
+|Калининградская о...| 3.0|
+| Сахалинская область| 3.0|
+|Владимирская область|3.01|
++--------------------+----+
+only showing top 20 rows
+[2024-09-16T19:35:05.850+0000] {logging_mixin.py:190} INFO - +--------------------+------+
+|              region|   max|
++--------------------+------+
+|Приволжский федер...| 116.0|
+|Северо-Кавказский...| 368.0|
+|Днепропетровская ...| 596.0|
+|Южно-Казахстанска...| 715.5|
+|    Киевская область| 717.1|
+| Гродненская область| 806.1|
+|  Херсонская область| 838.9|
+|                Чоко| 887.4|
+|    Одесская область| 948.8|
+|  Черкасская область|1032.8|
+|               Минск|1241.3|
+|Николаевская область|1477.7|
+| Запорожская область|3347.7|
+|              Алматы|3403.0|
+|            Люнебург|3487.0|
+| Могилевская область|3708.0|
+|     Сумская область|4132.2|
+|Карагандинская об...|4985.0|
+|Республика Ингушетия|6135.0|
+|    Донецкая область|6911.7|
++--------------------+------+
+only showing top 20 rows
+[2024-09-16T19:35:11.024+0000] {logging_mixin.py:190} INFO - +----+-----+
+| age|count|
++----+-----+
+|1920| 3563|
+|1930| 9834|
+|1940|15703|
+|1950|68324|
+|1960|95062|
+|1970|84544|
+|1980|78445|
+|1990|37092|
+|2000|19741|
+|2010| 9902|
++----+-----+
+[2024-09-16T19:35:11.715+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-16T19:35:11.732+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-16T19:35:11.733+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=main, task_id=etl_process, run_id=manual__2024-09-16T19:34:06.763289+00:00, execution_date=20240916T193406, start_date=20240916T193410, end_date=20240916T193511
+[2024-09-16T19:35:11.780+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-16T19:35:11.800+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-16T19:35:11.802+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

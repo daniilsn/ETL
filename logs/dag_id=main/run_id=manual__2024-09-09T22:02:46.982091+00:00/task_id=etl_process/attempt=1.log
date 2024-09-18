@@ -1,0 +1,34 @@
+[2024-09-09T22:02:50.941+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-09T22:02:50.968+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: main.etl_process manual__2024-09-09T22:02:46.982091+00:00 [queued]>
+[2024-09-09T22:02:50.981+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: main.etl_process manual__2024-09-09T22:02:46.982091+00:00 [queued]>
+[2024-09-09T22:02:50.981+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-09-09T22:02:50.998+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): etl_process> on 2024-09-09 22:02:46.982091+00:00
+[2024-09-09T22:02:51.003+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3161) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-09T22:02:51.005+0000] {standard_task_runner.py:72} INFO - Started process 3162 to run task
+[2024-09-09T22:02:51.006+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'main', 'etl_process', 'manual__2024-09-09T22:02:46.982091+00:00', '--job-id', '253', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpce8lfko3']
+[2024-09-09T22:02:51.008+0000] {standard_task_runner.py:105} INFO - Job 253: Subtask etl_process
+[2024-09-09T22:02:51.062+0000] {task_command.py:467} INFO - Running <TaskInstance: main.etl_process manual__2024-09-09T22:02:46.982091+00:00 [running]> on host 1172ef8b9371
+[2024-09-09T22:02:51.168+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='main' AIRFLOW_CTX_TASK_ID='etl_process' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T22:02:46.982091+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-09T22:02:46.982091+00:00'
+[2024-09-09T22:02:51.169+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-09T22:03:01.763+0000] {logging_mixin.py:190} INFO - 590707
+[2024-09-09T22:03:01.954+0000] {logging_mixin.py:190} INFO - root
+ |-- __h_o_u_s_e___i_d_: string (nullable = true)
+ |-- _l_a_t_i_t_u_d_e_: string (nullable = true)
+ |-- _l_o_n_g_i_t_u_d_e_: string (nullable = true)
+ |-- _m_a_i_n_t_e_n_a_n_c_e___y_e_a_r_: string (nullable = true)
+ |-- _s_q_u_a_r_e_: string (nullable = true)
+ |-- _p_o_p_u_l_a_t_i_o_n_: string (nullable = true)
+ |-- _r_e_g_i_o_n_: string (nullable = true)
+ |-- _l_o_c_a_l_i_t_y___n_a_m_e_: string (nullable = true)
+ |-- _a_d_d_r_e_s_s_: string (nullable = true)
+ |-- _f_u_l_l___a_d_d_r_e_s_s_: string (nullable = true)
+ |-- _c_o_m_m_u_n_a_l___s_e_r_v_i_c_e___i_d_: string (nullable = true)
+ |-- _d_e_s_c_r_i_p_t_i_o_n_: string (nullable = true)
+[2024-09-09T22:03:02.150+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-09T22:03:02.165+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-09T22:03:02.165+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=main, task_id=etl_process, run_id=manual__2024-09-09T22:02:46.982091+00:00, execution_date=20240909T220246, start_date=20240909T220250, end_date=20240909T220302
+[2024-09-09T22:03:02.193+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-09T22:03:02.214+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-09T22:03:02.216+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

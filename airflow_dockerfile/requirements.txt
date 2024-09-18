@@ -1,0 +1,5 @@
+airflow-providers-clickhouse
+requests==2.31.0
+pyspark==3.5.2
+dbt-core
+dbt-clickhouse
