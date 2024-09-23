@@ -1,5 +1,6 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
+from airflow.operators.bash import BashOperator
 from airflow.utils.dates import days_ago
 from clickhouse_driver import Client
 from pyspark.sql import SparkSession
@@ -198,6 +199,11 @@ def etl():
 
     spark.stop()
     
+download_file = BashOperator(
+    task_id='download_file',
+    bash_command='curl -L "https://www.dropbox.com/scl/fi/xybeqctb7gnow5spp03ln/russian_houses.csv?rlkey=9gafw4h5wlrmywt5ogrqmhfxy&st=j1r65rqy&dl=1" -o /opt/airflow/row_data/russian_houses.csv',
+    dag=dag,
+)
 
 task_query_clickhouse = PythonOperator(
     task_id='query_clickhouse',
@@ -219,4 +225,4 @@ task_etl= PythonOperator(
 )
 
 
-task_query_clickhouse >> task_query_postgres  >> task_etl 
+task_query_clickhouse >> task_query_postgres  >> download_file >> task_etl 
