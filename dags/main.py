@@ -1,5 +1,6 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
+from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.bash import BashOperator
 from airflow.utils.dates import days_ago
 from clickhouse_driver import Client
@@ -198,6 +199,19 @@ def etl():
     client.execute('INSERT INTO default.russian_houses VALUES', data_tuples)
 
     spark.stop()
+
+def top_25_houses():
+    sql = """
+    SELECT house_id, square 
+    FROM russian_houses
+    WHERE square > 60
+    ORDER BY square
+    LIMIT 25
+    """
+    result = client.execute(sql)
+    for row in result:
+        print(row)
+    
     
 download_file = BashOperator(
     task_id='download_file',
@@ -224,5 +238,11 @@ task_etl= PythonOperator(
     dag=dag,
 )
 
+task_show_house = PythonOperator(
+    task_id='show_top_houses',
+    python_callable=top_25_houses,
+    dag=dag,
+)
 
-task_query_clickhouse >> task_query_postgres  >> download_file >> task_etl 
+
+task_query_clickhouse >> task_query_postgres  >> download_file >> task_etl >> task_show_house
