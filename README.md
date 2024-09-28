@@ -46,6 +46,7 @@ docker exec -it <containerID> bash
 ## ClickHouse
 
 Чтобы использовать ClickHouse, необходимо настроить соединение в Airflow GUI в разделе `Admin > Connections`, указав адрес сервера и учетные данные.
+`Conn Id > clickhouse`, `Conn Type > clickhouse`, 
 
 ## Условия задания
 
