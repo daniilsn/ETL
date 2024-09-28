@@ -36,7 +36,7 @@ docker exec -it <containerID> bash
 |---------------|-------------------------|---------------|-------------|
 | Airflow       | http://localhost:8080    | airflow       | airflow     |
 | PostgreSQL    | http://localhost:5432    | airflow       | airflow     |
-| ClickHouse    | `DBeaver host:localhost` | admin         | admin       |
+| ClickHouse    | http://localhost:9000    | admin         | admin       |
 
 
 ## Источник
