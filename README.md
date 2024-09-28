@@ -32,10 +32,12 @@ docker exec -it <containerID> bash
 
 ## Сервисы
 
-| Airflow | http://localhost:8080 | user: airflow | pass: airflow
-| PostgreSQL | http://localhost:5432 | airflow | airflow         |
-| ClickHouse | `Dbeaver host:localhost`  |  admin       |   admin       |
-***
+| Сервис        | Адрес                   | Пользователь  | Пароль      |
+|---------------|-------------------------|---------------|-------------|
+| Airflow       | http://localhost:8080    | airflow       | airflow     |
+| PostgreSQL    | http://localhost:5432    | airflow       | airflow     |
+| ClickHouse    | `DBeaver host:localhost` | admin         | admin       |
+
 
 ## Источник
 
